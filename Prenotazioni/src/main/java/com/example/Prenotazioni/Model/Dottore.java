@@ -22,6 +22,11 @@ public class Dottore {
         this.specializzazione = specializzazione;
     }
 
+    public Dottore(String nominativo, String specializzazione) {
+        this.nominativo = nominativo;
+        this.specializzazione = specializzazione;
+    }
+
     public int getId() {
         return id;
     }

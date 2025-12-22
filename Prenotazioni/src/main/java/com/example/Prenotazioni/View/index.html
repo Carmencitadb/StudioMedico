@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>
+        Studiomento Medico
+    </title>
+    <script src="script/scripts.js"></script>
+</head>
+<body>
+    <section id="prenotazione">
+        <h1>PRENOTA VISITA!!!!</h1>
+        <h3>DATI CLIENTE</h3>
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome"><br>
+        <label for="cognome">Cognome:</label><br>
+        <input type="text" id="cognome" name="cognome"><br><br>
+        <h3>DATI VISITA</h3>
+        <label>Dettagli Visita:</label><br>
+        <input type="radio" id="visita" value="oncologica" name="visita">oncologica<br>
+        <input type="radio" id="visita" value="cardiologa" name="visita">cardiologa<br>
+        <input type="radio" id="visita" value="ginecologica" name="visita">ginecologica<br>
+        <input type="date" id="data"><br>
+        <br><input type="submit" value="Invia Prenotazione" onclick="onClickPrenota()">
+        <p id="esito"></p>
+    </section>
+</body>
+</html>

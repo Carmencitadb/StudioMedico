@@ -22,6 +22,13 @@ public class Prenotazione implements Serializable {
 
     }
 
+    public Prenotazione(int idDottore, String visita, int idCliente, Date data) {
+        this.idDottore = idDottore;
+        this.visita = visita;
+        this.idCliente = idCliente;
+        this.data = data;
+    }
+
     public Prenotazione(int id, String visita, Date data, int idDottore, int idCliente) {
         this.id = id;
         this.visita = visita;
