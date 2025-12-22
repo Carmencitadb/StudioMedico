@@ -41,4 +41,7 @@ public class DottoreController {
     public void Delete(@PathVariable int id) {
         service.deleteDottore(id);
     }
+
+    @GetMapping("/getSpecializzazione")
+    public Dottore findBySpecializzazione(@PathVariable String specializzazione) {return service.findBySpecializzazione(specializzazione);}
 }

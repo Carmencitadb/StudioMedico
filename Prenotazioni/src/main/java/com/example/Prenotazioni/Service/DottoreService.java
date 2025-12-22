@@ -38,4 +38,8 @@ public class DottoreService {
     public void deleteDottore(int id){
        repo.deleteById(id);
     }
+
+    public Dottore findBySpecializzazione(String specializzazione){
+        return repo.findBySpecializzazione(specializzazione);
+    }
 }

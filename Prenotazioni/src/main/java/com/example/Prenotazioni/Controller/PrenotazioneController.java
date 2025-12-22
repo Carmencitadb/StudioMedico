@@ -43,3 +43,4 @@ public class PrenotazioneController {
         service.deletePrenotazione(id);
     }
 }
+
