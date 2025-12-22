@@ -1,0 +1,43 @@
+package com.example.Prenotazioni.Controller;
+
+import com.example.Prenotazioni.Model.Dottore;
+import com.example.Prenotazioni.Service.DottoreService;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/dottori")
+public class DottoreController {
+
+    DottoreService service;
+
+    public DottoreController(DottoreService service) {
+        this.service = service;
+    }
+
+    @GetMapping("/getAllDottori")
+    public List<Dottore> getAll(){
+        return service.getAll();
+    }
+
+    @GetMapping("/getDottore")
+    public Dottore Dottore(@PathVariable int id) {
+        return service.getDottore(id);
+    }
+
+    @PostMapping("/createLibro")
+    public Dottore createLbro(@RequestBody Dottore dottore) {
+        return service.createDottore(dottore);
+    }
+
+    @PutMapping("/putLibro")
+    public Dottore updateDottore(@RequestBody Dottore dottore) {
+        return service.updateDottore(dottore);
+    }
+
+    @DeleteMapping("/deleteDottore")
+    public void Delete(@PathVariable int id) {
+        service.deleteDottore(id);
+    }
+}
