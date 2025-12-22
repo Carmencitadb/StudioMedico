@@ -23,7 +23,7 @@ public class PrenotazioneController {
         return service.getAll();
     }
 
-    @GetMapping("/getPrenotazione")
+    @GetMapping("/getPrenotazione/{id}")
     public Prenotazione getPrenotazione(@PathVariable int id) {
         return service.getPrenotazione(id);
     }
@@ -38,7 +38,7 @@ public class PrenotazioneController {
         return service.updatePrenotazione(prenotazione);
     }
 
-    @DeleteMapping("/deletePrenotazione")
+    @DeleteMapping("/deletePrenotazione/{id}")
     public void Delete(@PathVariable int id) {
         service.deletePrenotazione(id);
     }

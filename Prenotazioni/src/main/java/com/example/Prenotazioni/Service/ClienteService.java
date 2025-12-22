@@ -35,4 +35,8 @@ public class ClienteService {
     public void deleteCliente(int id){
         repo.deleteById(id);
     }
+
+    public Cliente findClienteByNomeAndCognome(String nome, String cognome){
+      return  repo.findClienteByNomeAndCognome(nome, cognome);
+    }
 }

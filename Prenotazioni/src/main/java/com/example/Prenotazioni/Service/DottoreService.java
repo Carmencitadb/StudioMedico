@@ -40,6 +40,6 @@ public class DottoreService {
     }
 
     public Dottore findBySpecializzazione(String specializzazione){
-        return repo.findBySpecializzazione(specializzazione);
+        return repo.findDottoreBySpecializzazione(specializzazione);
     }
 }

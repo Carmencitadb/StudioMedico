@@ -22,7 +22,7 @@ public class DottoreController {
         return service.getAll();
     }
 
-    @GetMapping("/getDottore")
+    @GetMapping("/getDottore/{id}")
     public Dottore Dottore(@PathVariable int id) {
         return service.getDottore(id);
     }
@@ -37,11 +37,11 @@ public class DottoreController {
         return service.updateDottore(dottore);
     }
 
-    @DeleteMapping("/deleteDottore")
+    @DeleteMapping("/deleteDottore/{id}")
     public void Delete(@PathVariable int id) {
         service.deleteDottore(id);
     }
 
-    @GetMapping("/getSpecializzazione")
-    public Dottore findBySpecializzazione(@PathVariable String specializzazione) {return service.findBySpecializzazione(specializzazione);}
+    @GetMapping("/getSpecializzazione/{specializzazione}")
+    public Dottore findDottoreBySpecializzazione(@PathVariable String specializzazione) {return service.findBySpecializzazione(specializzazione);}
 }

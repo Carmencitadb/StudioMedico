@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface DottoreRepo extends JpaRepository <Dottore,Integer> {
 
-    Dottore findBySpecializzazione(String specializzazione);
+    Dottore findDottoreBySpecializzazione(String specializzazione);
 }

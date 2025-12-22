@@ -22,7 +22,7 @@ public class ClienteController {
         return service.getAll();
     }
 
-    @GetMapping("/getCliente")
+    @GetMapping("/getCliente/{id}")
     public Cliente getCliente(@PathVariable int id){
         return service.getCliente(id);
     }
@@ -37,8 +37,13 @@ public class ClienteController {
         return service.updateCliente(cliente);
     }
 
-    @DeleteMapping("/deleteCliente")
+    @DeleteMapping("/deleteCliente/{id}")
     public void deleteCliente(@PathVariable int id){
         service.deleteCliente(id);
+    }
+
+    @GetMapping("/getNomeCognome/{nome}/{cognome}")
+    public Cliente findClienteByNomeAndCognome(@PathVariable String nome, @PathVariable String cognome){
+   return service.findClienteByNomeAndCognome(nome, cognome);
     }
 }
