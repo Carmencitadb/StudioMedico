@@ -1,35 +1,47 @@
 
  var headers = {
    "Content-Type": "application/json",                                                                                                
-   "Access-Control-Origin": "*"
+   "Access-Control-Allow-Origin": "*"
 }
 
-const url = "http://localhost:8080"
+const url = "http://localhost:8080";
 
-function onClickPrenota(){
-
-    document.getElementById("esito").innerHTML = "Inviato!";
+//    /clienti/getNomeCognome/{nome}/{cognome}
+async function onClickPrenota(){
 
     var cliente = {
-
         nome : document.getElementById("nome").value,
         cognome : document.getElementById("cognome").value,
-
     }
-    
-    
 
-    fetch (url + "/createCliente", {
+
+    var id = await checkClienteExist(cliente);
+
+       if (id===null || id === undefined){
+        cliente = await createCliente(cliente);
+         }
+        else{
+        console.log("id = "+id);
+        } 
+    
+}
+
+async function createCliente(cliente){
+    const response = await fetch (url + "/clienti/createCliente", {
         method: "POST",
         headers : headers,
         body : JSON.stringify(cliente)
     })
-    .then(function(response){
-        return response.json();
-    })
-    .then(function(cliente){
-        console.log(cliente)
-    });
-
-
+   
+    return await response.json();
 }
+
+async function checkClienteExist(cliente){
+    const response = await fetch (url + "/clienti/getNomeCognome/"+cliente.nome+"/"+cliente.cognome, {
+        method: "GET",
+        headers : headers
+    })
+    const data = await response.json();
+    return data.id;
+}
+
