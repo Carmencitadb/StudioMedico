@@ -1,3 +1,4 @@
+
 <html>
 
 <head>
@@ -75,31 +76,43 @@
         <h3>DATI VISITA</h3>
         <label>Dettagli Visita:</label><br>
         <input type="radio" id="visita" value="oncologica" name="visita">oncologica<br>
-        <input type="radio" id="visita" value="cardiologa" name="visita">cardiologa<br>
+        <input type="radio" id="visita" value="cardiologa" name="visita">cardiologica<br>
         <input type="radio" id="visita" value="ginecologica" name="visita">ginecologica<br>
         <input type="date" id="data"><br>
         <br><input type="submit" value="Invia Prenotazione" onclick="onClickPrenota()">
         <p id="esito"></p>
 </section>
 
-<!--Footer-->
-<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-    <div class="col-md-4 d-flex align-items-center"> <a href="/"
-                                                        class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" aria-label="Bootstrap"> <svg
-            class="bi" width="30" height="24" aria-hidden="true">
-        <use xlink:href="#bootstrap"></use>
-    </svg> </a> <span class="mb-3 mb-md-0 text-body-secondary">© 2025 Company, Inc</span> </div>
-    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-        <li class="ms-3"><a class="text-body-secondary" href="#" aria-label="Instagram"><svg class="bi" width="24"
-                                                                                             height="24" aria-hidden="true">
-            <use xlink:href="#instagram"></use>
-        </svg></a></li>
-        <li class="ms-3"><a class="text-body-secondary" href="#" aria-label="Facebook"><svg class="bi" width="24"
-                                                                                            height="24">
-            <use xlink:href="#facebook"></use>
-        </svg></a></li>
-    </ul>
-</footer>
+
+<!--sez fatta bene-->
+<div class="col-md-7 col-lg-8"> <h4 class="mb-3">Prenotazione</h4> <form class="needs-validation" novalidate=""> <div class="row g-3"> <div class="col-sm-6"> <label for="firstName" class="form-label">First name</label> <input type="text" class="form-control" id="firstName" placeholder="" value="" required=""> <div class="invalid-feedback">
+    Valid first name is required.
+</div> </div> <div class="col-sm-6"> <label for="lastName" class="form-label">Last name</label> <input type="text" class="form-control" id="lastName" placeholder="" value="" required=""> <div class="invalid-feedback">
+    Valid last name is required.
+
+
+</div> <hr class="my-4"> <h4 class="mb-3">Dettagli Visita</h4> <div class="my-3"> <div class="form-check"> <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked="" required=""> <label class="form-check-label" for="credit">Oncologica</label> </div> <div class="form-check"> <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required=""> <label class="form-check-label" for="debit">Cardiologica</label> </div> <div class="form-check"> <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required=""> <label class="form-check-label" for="paypal">Ginecologica</label> </div> </div>
+    <input type="date" id="data"><br>
+    <br><input type="submit" value="Invia Prenotazione" onclick="onClickPrenota()">
+    <p id="esito"></p>
+    <!--Footer-->
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center"> <a href="/"
+                                                            class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" aria-label="Bootstrap"> <svg
+                class="bi" width="30" height="24" aria-hidden="true">
+            <use xlink:href="#bootstrap"></use>
+        </svg> </a> <span class="mb-3 mb-md-0 text-body-secondary">© 2025 Company, Inc</span> </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-body-secondary" href="#" aria-label="Instagram"><svg class="bi" width="24"
+                                                                                                 height="24" aria-hidden="true">
+                <use xlink:href="#instagram"></use>
+            </svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#" aria-label="Facebook"><svg class="bi" width="24"
+                                                                                                height="24">
+                <use xlink:href="#facebook"></use>
+            </svg></a></li>
+        </ul>
+    </footer>
 </body>
 
 </html>
